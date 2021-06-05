@@ -1,0 +1,12 @@
+devel/
+build/
+install/
+devel_isolated/
+el/
+el_isolated/
+.catkin_workspace
+.vscode/
+.ycm_extra_conf.py
+.ycm_extra_conf.pyc
+*.bag
+

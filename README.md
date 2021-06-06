@@ -25,10 +25,10 @@ catkin_make -DCATKIN_WHITELIST_PACKAGES=orb_slam_dense
 cd catkin_ws
 source devel/setup.bash
 
-roslaunch orb_slam_dense rgbd1.launch 
+roslaunch orb_slam_dense rgbd1.launch                              #启动orb_slam
+roslaunch mask_cnn mask_cnn.launch image:=/camera/rgb/image_color  #启动mask_cnn
+rosbag play rgbd_dataset_freiburg1_room.bag -r 0.1                 #播放rosbag
 
-rosbag play rgbd_dataset_freiburg1_room.bag -r 0.2
 
-roslaunch mask_cnn mask_cnn.launch image:=/camera/rgb/image_color
 
 
